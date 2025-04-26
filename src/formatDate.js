@@ -36,7 +36,7 @@ function formatDate(date, fromFormat, toFormat) {
     if (toFormat[i] === 'YYYY') {
       if (fromYearFormat === 'YYYY') {
         toYear = fromYear;
-      } else if (fromYearFormat === 'YY' && fromYear < 30) {
+      } else if (fromYearFormat === 'YY' && Number(fromYear) < 30) {
         toYear = Number('20' + fromYear);
       } else {
         toYear = Number('19' + fromYear);
