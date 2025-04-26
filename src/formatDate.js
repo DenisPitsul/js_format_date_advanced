@@ -7,7 +7,7 @@
  *
  * @returns {string}
  */
-function formatDate (date, fromFormat, toFormat) {
+function formatDate(date, fromFormat, toFormat) {
   const fromSeparator = fromFormat[3];
   const toSeparator = toFormat[3];
 
@@ -46,7 +46,7 @@ function formatDate (date, fromFormat, toFormat) {
       if (fromYearFormat === 'YY') {
         toYear = fromYear;
       } else {
-        toYear = fromYear % 100;
+        toYear = String(fromYear % 100).padStart(2, '0');
       }
       toDateArr.push(toYear);
     } else if (toFormat[i] === 'MM') {
